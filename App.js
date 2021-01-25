@@ -1,24 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, View, SafeAreaView, Image, Button, Alert } from 'react-native';
 
 export default function App() {
-  let x = 1;
-  console.log("app connected");
-
-    return (
-    <View style={styles.container}>
-      <Text>Hello React Native</Text>
-      <StatusBar style="auto" />
-    </View>
+  return (
+    <SafeAreaView style={styles.container}>
+      <Button
+        title='click me' onPress={() => Alert.prompt('My Title', 'My Message', text => console.log(text))}
+      />
+    </SafeAreaView >
   );
 }
+// ALERT.ALERT WITH PARAMATERS
+// Alert.alert("My Title", 'My Message', [
+//   { text: "Yes", onPress: () => console.log('Yes') },
+//   { text: 'No', onPress: () => console.log('No') }
+// ])
+
+{/* <Text>Hello React Native</Text>
+<TouchableHighlight onPress={() => console.log('image highlight')}>
+  <Image source={{
+    width: 200,
+    height: 300,
+    uri: 'https://picsum.photos/200/300'
+  }} />
+</TouchableHighlight>
+<StatusBar style="auto" /> */}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center'
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });

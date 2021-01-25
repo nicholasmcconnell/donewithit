@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A market place for selling the stuff you don't need anymore.",
+    "githubUrl": "https://github.com/nicholasmcconnell/DoneWithIt"
   }
 }
