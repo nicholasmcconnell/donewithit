@@ -3,9 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  return (
+  let x = 1;
+  console.log("app connected");
+
+    return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
+      <Text>Hello React Native</Text>
       <StatusBar style="auto" />
     </View>
   );
