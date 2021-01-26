@@ -1,22 +1,52 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, View, SafeAreaView, Image, Button, Alert } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  TouchableHighlight,
+  View,
+  SafeAreaView,
+  Image,
+  Button,
+  Alert,
+  Platform,
+  StatusBar
+} from 'react-native';
 
 export default function App() {
   return (
+    // style prop can take an array - greater index's values replace same in lesser index's
     <SafeAreaView style={styles.container}>
       <Button
-        title='click me' onPress={() => Alert.prompt('My Title', 'My Message', text => console.log(text))}
+        title='click me' onPress={() => console.log('text')}
       />
     </SafeAreaView >
   );
 }
+
+const containerStyle = { backgroundColor: 'orange' }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    // justifyContent: 'center',
+    // alignItems: 'center'
+  },
+});
+
+
+//UNUSED CODE AND EXAMPLES
+
 // ALERT.ALERT WITH PARAMATERS
 // Alert.alert("My Title", 'My Message', [
 //   { text: "Yes", onPress: () => console.log('Yes') },
 //   { text: 'No', onPress: () => console.log('No') }
 // ])
 
+//IMAGE TAG
 {/* <Text>Hello React Native</Text>
 <TouchableHighlight onPress={() => console.log('image highlight')}>
   <Image source={{
@@ -27,13 +57,4 @@ export default function App() {
 </TouchableHighlight>
 <StatusBar style="auto" /> */}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center'
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-});
+
