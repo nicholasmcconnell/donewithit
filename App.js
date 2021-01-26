@@ -15,8 +15,10 @@ import {
   StatusBar,
   Dimensions
 } from 'react-native';
+
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
+import AppText from './app/components/AppText';
 
 
 export default function App() {
@@ -29,7 +31,8 @@ export default function App() {
         alignItems: 'center',
       }}
     >
-      <Text></Text>
+
+      <AppText>I Love React Native!</AppText>
     </View >
   )
 }
@@ -289,3 +292,53 @@ export default function App() {
       //   margin: 20,
       // }}></View>
       // </View >)
+
+///////////TEXT AND FONT STYLING//////
+
+    // List of system fonts on iOS and Android:
+    // https://github.com/react-native-training/react-native-fonts
+
+    // (
+    //   <View
+    //     style={{
+    //       flex: 1,
+    //       justifyContent: 'center',
+    //       alignItems: 'center',
+    //     }}
+    //   >
+
+    //     <Text
+    //       //React-Native styling does not have styling inheritrance
+    //       style={{
+    //         // fontFamily: 'Courier', //doesnt work on android and roboto doesn't work on iOS
+    //         fontSize: 30,
+    //         fontStyle: 'italic',
+    //         fontWeight: '600', //has to be string
+    //         color: 'tomato',
+    //         textTransform: 'capitalize', //controls case
+    //         textDecorationLine: 'underline', //line through and option too
+    //         textAlign: 'center',
+    //         lineHeight: 40,
+    //       }}>I Love React Native!  This is my first React NAtive app.  Here is osme more text</Text>
+    //   </View >
+    // )
+
+    ////////IMPLIMENTING STYLING INHERITANCE///
+        ///CREATE CUSTOM COMPONENT AND IMPORT
+        //   function AppText({ children }) {
+        //     return (
+        //         <Text style={styles.text}>{children}</Text>
+        //     );
+        // }
+
+        // const styles = StyleSheet.create({
+        //     text: {
+        //         fontSize: 18,
+        //         fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
+        //     }
+        // })
+
+        // export default AppText;
+
+/////////////ICONS//////////////
+    //https://icons.expo.fyi/
