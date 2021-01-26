@@ -16,43 +16,14 @@ import {
   Dimensions
 } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
-    <View style={{
-      backgroundColor: 'white',
-      flex: 1,
-      flexDirection: 'row', // makes main axis horizontal
-      justifyContent: 'center', //aligns items along main or horizontal axis because flex direction is set to row.
-      alignItems: 'center', //alignts itemes along secondary axis within each line -> wrap example that pushes them all to top because !alignContent
-      alignContent: 'center', //aligns all content along secondary axis -> in this case vertical
-      // flexWrap: 'wrap'
-    }}>
-
-      <View style={{
-        backgroundColor: 'dodgerblue',
-        width: 100,
-        height: 100,
-
-      }} />
-      <View style={{
-        backgroundColor: 'gold',
-        width: 100,
-        height: 100,
-        left: 20,
-        top: 20,  //like setting margin -> can do negative # and bottom, right, left.  Changes postition without affecting the layout or other items
-        //component default positioning is 'relative' -> allows for moving components without affecting layout
-        position: 'absolute', //positoins component relative to its parent and other items move to fill space (i.e. it affects the layout)
-      }} />
-      <View style={{
-        backgroundColor: 'tomato',
-        width: 100,
-        height: 100
-      }} />
-    </View>
+    <WelcomeScreen />
   );
 }
 
