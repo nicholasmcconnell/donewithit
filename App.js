@@ -17,29 +17,32 @@ import {
 } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import WelcomeScreen from './app/screens/WelcomeScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
 
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
-    <WelcomeScreen />
-  );
+    <ViewImageScreen />
+  )
 }
 
-const containerStyle = { backgroundColor: 'orange' }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
-    // justifyContent: 'center',
-    // alignItems: 'center'
-  },
-});
 
 
 /////////////////////////UNUSED CODE AND EXAMPLES/////////////////////////////
+
+///////////STYLES EXAMPLES//////////
+
+      // const containerStyle = { backgroundColor: 'orange' }
+      // const styles = StyleSheet.create({
+      //   container: {
+      //     flex: 1,
+      //     backgroundColor: '#fff',
+      //     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+      //     // justifyContent: 'center',
+      //     // alignItems: 'center'
+      //   },
 
 // ALERT.ALERT WITH PARAMATERS
 
