@@ -31,7 +31,9 @@ export default function App() {
       //  row-reverse - floated right
       //  column-reverses - floates botom left
       justifyContent: 'center', //aligns items along main or horizontal axis because flex direction is set to row.
-      alignItems: 'center', //alignts itemes along secondary axis
+      alignItems: 'center', //alignts itemes along secondary axis within each line -> wrap example that pushes them all to top because !alignContent
+      alignContent: 'center', //aligns all content along secondary axis -> in this case vertical
+      flexWrap: 'wrap'
     }}>
 
       <View style={{
@@ -44,16 +46,28 @@ export default function App() {
         width: 100,
         height: 300,
         //move one item
-        alignSelf: 'flex-start'
+        // alignSelf: 'flex-start'
       }} />
       <View style={{
         backgroundColor: 'gold',
         // flex: 1
         width: 100,
-        height: 200
+        height: 100
       }} />
       <View style={{
         backgroundColor: 'tomato',
+        // flex 1,
+        width: 100,
+        height: 100
+      }} />
+      <View style={{
+        backgroundColor: 'grey',
+        // flex 1,
+        width: 100,
+        height: 100
+      }} />
+      <View style={{
+        backgroundColor: 'greenyellow',
         // flex 1,
         width: 100,
         height: 100
