@@ -12,17 +12,41 @@ import {
   Button,
   Alert,
   Platform,
-  StatusBar
+  StatusBar,
+  Dimensions
 } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+
 
 export default function App() {
+  const { landscape } = useDeviceOrientation();
+
   return (
-    // style prop can take an array - greater index's values replace same in lesser index's
-    <SafeAreaView style={styles.container}>
-      <Button
-        title='click me' onPress={() => console.log('text')}
-      />
-    </SafeAreaView >
+    <View style={{
+      backgroundColor: 'white',
+      flex: 1,
+    }}>
+
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        // flex: 2 twice the size of others -> its two of the four sections 
+        //not used height and width
+        width: 100,
+        height: 100
+      }} />
+      <View style={{
+        backgroundColor: 'gold',
+        // flex: 1
+        width: 100,
+        height: 100
+      }} />
+      <View style={{
+        backgroundColor: 'tomato',
+        // flex 1,
+        width: 100,
+        height: 100
+      }} />
+    </View>
   );
 }
 
@@ -41,12 +65,14 @@ const styles = StyleSheet.create({
 //UNUSED CODE AND EXAMPLES
 
 // ALERT.ALERT WITH PARAMATERS
+
 // Alert.alert("My Title", 'My Message', [
 //   { text: "Yes", onPress: () => console.log('Yes') },
 //   { text: 'No', onPress: () => console.log('No') }
 // ])
 
 //IMAGE TAG
+
 {/* <Text>Hello React Native</Text>
 <TouchableHighlight onPress={() => console.log('image highlight')}>
   <Image source={{
@@ -56,5 +82,41 @@ const styles = StyleSheet.create({
   }} />
 </TouchableHighlight>
 <StatusBar style="auto" /> */}
+
+//BUTTON
+
+{/* <Button
+title='click me' onPress={() => console.log('text')}
+/> */}
+
+//DIMENSIONS
+{/* <View style={{
+  backgroundColor: 'dodgerblue',
+  width: '50%',
+  height: 70
+
+}}></View> */}
+//DIMENSIONS DON'T RESPOND TO HORIZONTAL PHONE
+// console.log(Dimensions.get('screen'))
+
+//ACCONTING FOR LANDSCAPE MODE (I.E. VIDEO PLAYER)
+
+//change this to default in app.json -> "orientation": "default",
+//can also be portrait or landscape only
+
+// import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+
+// export default function App() {
+//   const { landscape } = useDeviceOrientation();
+
+// style prop can take an array - greater index's values replace same in lesser index's
+//   <SafeAreaView style={styles.container}>
+//   <View style={{
+//     backgroundColor: 'dodgerblue',
+//     width: '100%',
+//     height: landscape ? '100%' : '30%'
+
+//   }}></View>
+// </SafeAreaView >
 
 
