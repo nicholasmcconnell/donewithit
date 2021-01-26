@@ -18,7 +18,8 @@ import {
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
-import AppText from './app/components/AppText';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 
 export default function App() {
@@ -31,8 +32,8 @@ export default function App() {
         alignItems: 'center',
       }}
     >
+      <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
 
-      <AppText>I Love React Native!</AppText>
     </View >
   )
 }
@@ -325,6 +326,10 @@ export default function App() {
 
     ////////IMPLIMENTING STYLING INHERITANCE///
         ///CREATE CUSTOM COMPONENT AND IMPORT
+
+        // import AppText from './app/components/AppText';
+        // <AppText>I Love React Native!</AppText>
+
         //   function AppText({ children }) {
         //     return (
         //         <Text style={styles.text}>{children}</Text>
@@ -340,5 +345,11 @@ export default function App() {
 
         // export default AppText;
 
+
+
 /////////////ICONS//////////////
     //https://icons.expo.fyi/
+    //import { MaterialCommunityIcons } from '@expo/vector-icons'
+
+    // name property comes from nam ewhen searching above icon library at above site
+    // <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
