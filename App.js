@@ -132,7 +132,7 @@ title='click me' onPress={() => console.log('text')}
 // </SafeAreaView >
 
 
-// ///////THIS IS ALL ABOUT ALIGNING ITEMS////////
+// `///////THIS IS ALL ABOUT ALIGNING ITEMS////////
 // export default function App() {
 //   const { landscape } = useDeviceOrientation();
 
@@ -174,6 +174,6 @@ title='click me' onPress={() => console.log('text')}
 //       }} />
 //     </View>
 //   );
-// }
+// }`
 
 
