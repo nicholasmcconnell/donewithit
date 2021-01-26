@@ -25,20 +25,31 @@ export default function App() {
     <View style={{
       backgroundColor: 'white',
       flex: 1,
+      //because default is vertical floated left
+      flexDirection: 'row', // makes main axis horizontal
+      //  row-reverse - floated right
+      //  column-reverses - floates botom left
+      justifyContent: 'center', //aligns items along main or horizontal axis because flex direction is set to row.
+      alignItems: 'center', //alignts itemes along secondary axis
     }}>
 
       <View style={{
         backgroundColor: 'dodgerblue',
         // flex: 2 twice the size of others -> its two of the four sections 
         //not used height and width
+
+        //lays views out vertically
+        //css flex alighns items horzizontaly -> difference
         width: 100,
-        height: 100
+        height: 300,
+        //move one item
+        alignSelf: 'flex-start'
       }} />
       <View style={{
         backgroundColor: 'gold',
         // flex: 1
         width: 100,
-        height: 100
+        height: 200
       }} />
       <View style={{
         backgroundColor: 'tomato',
