@@ -20,6 +20,7 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import AppText from './app/components/AppText/AppText';
 
 
 export default function App() {
@@ -32,7 +33,7 @@ export default function App() {
         alignItems: 'center',
       }}
     >
-      <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
+      <AppText>I love React Native!</AppText>
 
     </View >
   )
@@ -353,3 +354,26 @@ export default function App() {
 
     // name property comes from nam ewhen searching above icon library at above site
     // <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
+
+//////////////PLATFORM-SPECIFIC CODE////////////////
+
+    // Create seperate AppText components
+      // AppText.ios.js or AppText.android.js
+
+    // OR -> use Platform.Select
+      //  const styles = StyleSheet.create({
+          //     text: {
+          //       color: 'tomato',
+          //       ...Platform.select({ //the spread allows .select()'s returned object to spread into the text object
+          //           ios: {
+          //               fontSize: 20,
+          //               fontFamily: 'Avenir'
+          //           },
+          //           android: {
+          //               fontSize: 18,
+          //               fontFamily: 'Roboto'
+          //           }
+          //       })
+
+          //   }
+          // })
