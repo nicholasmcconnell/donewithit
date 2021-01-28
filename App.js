@@ -9,7 +9,6 @@ import {
   View,
   SafeAreaView,
   Image,
-  Button,
   Alert,
   Platform,
   StatusBar,
@@ -18,27 +17,42 @@ import {
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
+import AppText from './app/components/AppText/index';
+import AppButton from './app/components/Button/AppButton';
+import Card from './app/components/Card/index';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons'
-import AppText from './app/components/AppText/AppText';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 export default function App() {
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <AppText>I love React Native!</AppText>
 
-    </View >
+    <ListingDetailsScreen></ListingDetailsScreen>
+
+
+    // <View
+    //   style={{
+    //     backgroundColor: '#f8f4f4',
+    //     padding: 20,
+    //     paddingTop: 100,
+    //   }}
+    // >
+    //   <Card
+    //     title='Red jacket for sale'
+    //     subTitle='$100'
+    //     image={require('./app/assets/jacket.jpg')} />
+    // </View >
+
+    // <WelcomeScreen></WelcomeScreen>
+
+
   )
 }
 
+{/* <AppButton title='Login' onPress={() => console.log('tapped')} /> */ }
+{/* <Button></Button> */ }
+{/* <AppText>I love React Native!</AppText> */ }
 
 
 /////////////////////////UNUSED CODE AND EXAMPLES/////////////////////////////
@@ -377,3 +391,7 @@ export default function App() {
 
           //   }
           // })
+
+// ORGANIZING STYLES
+    // simply moving const styles to seperate styles.js file.
+    //Also, AppText folder got index.js for exporting crap.
