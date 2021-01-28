@@ -1,23 +1,29 @@
 import React from 'react'
 import { Image, View, StyleSheet } from 'react-native'
 import AppText from '../components/AppText/index';
+import ListItem from '../components/ListItem/index';
 import colors from '../config/colors';
 
-export default function ListingDetailsScreen() {
+function ListingDetailsScreen(props) {
     return (
         <View>
             <Image style={styles.image} source={require('../assets/jacket.jpg')} />
             <View style={styles.detailsContainer}>
                 <AppText style={styles.title} >Red jacket for sale</AppText>
                 <AppText style={styles.price} >$100</AppText>
-                <ListItem
-                    image={require('..assets/nick.jpg')}
-
-                />
+                <View style={styles.userContainer} >
+                    <ListItem
+                        image={require('../../app/assets/nick.jpg')}
+                        title="Nick"
+                        subTitle="5 Listings"
+                    />
+                </View>
             </View>
         </View>
     )
 }
+
+export default ListingDetailsScreen;
 
 const styles = StyleSheet.create({
     detailsContainer: {
@@ -37,5 +43,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: '500',
+    },
+    userContainer: {
+        marginVertical: 40,
     },
 })
