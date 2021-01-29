@@ -255,147 +255,188 @@ export default function App() {
 
 /////////BORDERS///////
 
-    // ( <View style={{
-    //     backgroundColor: 'dodgerblue',
-    //     width: 100,
-    //     height: 100,
-    //     borderWidth: 10,
-    //     borderColor: 'royalblue',
-    //     borderRadius: 50, //makint it at least half the size of box to make circle
-    //     // borderTopWidth: 20,
-    //     // borderTopLeftRadius: 50,
-    //   }}></View>)
+// ( <View style={{
+//     backgroundColor: 'dodgerblue',
+//     width: 100,
+//     height: 100,
+//     borderWidth: 10,
+//     borderColor: 'royalblue',
+//     borderRadius: 50, //makint it at least half the size of box to make circle
+//     // borderTopWidth: 20,
+//     // borderTopLeftRadius: 50,
+//   }}></View>)
 
 //////////////SHADOW/////////////
 
-    // (<View style={{
-    //         backgroundColor: 'dodgerblue',
-    //         width: 100,
-    //         height: 100,
-    //         //iOS properties
-    //         shadowColor: 'grey',
-    //         shadowOffset: { width: 10, height: 10 }, //width = right, height = bottom -> can do neg to put shadow on other side
-    //         shadowOpacity: 1, //range 0 to 1
-    //         //Android properties
-    //         elevation: 20,
-    //       }}
-    //       ></View>)
+// (<View style={{
+//         backgroundColor: 'dodgerblue',
+//         width: 100,
+//         height: 100,
+//         //iOS properties
+//         shadowColor: 'grey',
+//         shadowOffset: { width: 10, height: 10 }, //width = right, height = bottom -> can do neg to put shadow on other side
+//         shadowOpacity: 1, //range 0 to 1
+//         //Android properties
+//         elevation: 20,
+//       }}
+//       ></View>)
 
 ///////////////PADDING AND MARGIN//////////
 
-      // (<View
-      // style={{
-      //   flex: 1,
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      // }}
-      // >
-      // <View style={{
-      //   backgroundColor: 'dodgerblue',
-      //   width: 100,
-      //   height: 100,
-      //   padding: 20,
-      //   paddingHorizontal: 10, //left and right padding -> overides padding in previous line
-      //   paddingLeft: 30, //overides padding horizongtal
-      // }}
-      // >
-      //   <View style={{
-      //     backgroundColor: 'gold',
-      //     width: 50,
-      //     height: 50,
-      //   }}></View>
-      // </View>
-      // <View style={{
-      //   backgroundColor: 'tomato',
-      //   width: 100,
-      //   height: 100,
-      //   margin: 20,
-      // }}></View>
-      // </View >)
+// (<View
+// style={{
+//   flex: 1,
+//   justifyContent: 'center',
+//   alignItems: 'center',
+// }}
+// >
+// <View style={{
+//   backgroundColor: 'dodgerblue',
+//   width: 100,
+//   height: 100,
+//   padding: 20,
+//   paddingHorizontal: 10, //left and right padding -> overides padding in previous line
+//   paddingLeft: 30, //overides padding horizongtal
+// }}
+// >
+//   <View style={{
+//     backgroundColor: 'gold',
+//     width: 50,
+//     height: 50,
+//   }}></View>
+// </View>
+// <View style={{
+//   backgroundColor: 'tomato',
+//   width: 100,
+//   height: 100,
+//   margin: 20,
+// }}></View>
+// </View >)
 
 ///////////TEXT AND FONT STYLING//////
 
-    // List of system fonts on iOS and Android:
-    // https://github.com/react-native-training/react-native-fonts
+// List of system fonts on iOS and Android:
+// https://github.com/react-native-training/react-native-fonts
 
-    // (
-    //   <View
-    //     style={{
-    //       flex: 1,
-    //       justifyContent: 'center',
-    //       alignItems: 'center',
-    //     }}
-    //   >
+// (
+//   <View
+//     style={{
+//       flex: 1,
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//     }}
+//   >
 
-    //     <Text
-    //       //React-Native styling does not have styling inheritrance
-    //       style={{
-    //         // fontFamily: 'Courier', //doesnt work on android and roboto doesn't work on iOS
-    //         fontSize: 30,
-    //         fontStyle: 'italic',
-    //         fontWeight: '600', //has to be string
-    //         color: 'tomato',
-    //         textTransform: 'capitalize', //controls case
-    //         textDecorationLine: 'underline', //line through and option too
-    //         textAlign: 'center',
-    //         lineHeight: 40,
-    //       }}>I Love React Native!  This is my first React NAtive app.  Here is osme more text</Text>
-    //   </View >
-    // )
+//     <Text
+//       //React-Native styling does not have styling inheritrance
+//       style={{
+//         // fontFamily: 'Courier', //doesnt work on android and roboto doesn't work on iOS
+//         fontSize: 30,
+//         fontStyle: 'italic',
+//         fontWeight: '600', //has to be string
+//         color: 'tomato',
+//         textTransform: 'capitalize', //controls case
+//         textDecorationLine: 'underline', //line through and option too
+//         textAlign: 'center',
+//         lineHeight: 40,
+//       }}>I Love React Native!  This is my first React NAtive app.  Here is osme more text</Text>
+//   </View >
+// )
 
-    ////////IMPLIMENTING STYLING INHERITANCE///
-        ///CREATE CUSTOM COMPONENT AND IMPORT
+////////IMPLIMENTING STYLING INHERITANCE///
+///CREATE CUSTOM COMPONENT AND IMPORT
 
-        // import AppText from './app/components/AppText';
-        // <AppText>I Love React Native!</AppText>
+// import AppText from './app/components/AppText';
+// <AppText>I Love React Native!</AppText>
 
-        //   function AppText({ children }) {
-        //     return (
-        //         <Text style={styles.text}>{children}</Text>
-        //     );
-        // }
+//   function AppText({ children }) {
+//     return (
+//         <Text style={styles.text}>{children}</Text>
+//     );
+// }
 
-        // const styles = StyleSheet.create({
-        //     text: {
-        //         fontSize: 18,
-        //         fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
-        //     }
-        // })
+// const styles = StyleSheet.create({
+//     text: {
+//         fontSize: 18,
+//         fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
+//     }
+// })
 
-        // export default AppText;
+// export default AppText;
 
 
 
 /////////////ICONS//////////////
-    //https://icons.expo.fyi/
-    //import { MaterialCommunityIcons } from '@expo/vector-icons'
+//https://icons.expo.fyi/
+//import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-    // name property comes from nam ewhen searching above icon library at above site
-    // <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
+// name property comes from nam ewhen searching above icon library at above site
+// <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
 
 //////////////PLATFORM-SPECIFIC CODE////////////////
 
-    // Create seperate AppText components
-      // AppText.ios.js or AppText.android.js
+// Create seperate AppText components
+// AppText.ios.js or AppText.android.js
 
-    // OR -> use Platform.Select
-      //  const styles = StyleSheet.create({
-          //     text: {
-          //       color: 'tomato',
-          //       ...Platform.select({ //the spread allows .select()'s returned object to spread into the text object
-          //           ios: {
-          //               fontSize: 20,
-          //               fontFamily: 'Avenir'
-          //           },
-          //           android: {
-          //               fontSize: 18,
-          //               fontFamily: 'Roboto'
-          //           }
-          //       })
+// OR -> use Platform.Select
+//  const styles = StyleSheet.create({
+//     text: {
+//       color: 'tomato',
+//       ...Platform.select({ //the spread allows .select()'s returned object to spread into the text object
+//           ios: {
+//               fontSize: 20,
+//               fontFamily: 'Avenir'
+//           },
+//           android: {
+//               fontSize: 18,
+//               fontFamily: 'Roboto'
+//           }
+//       })
 
-          //   }
-          // })
+//   }
+// })
 
 // ORGANIZING STYLES
-    // simply moving const styles to seperate styles.js file.
-    //Also, AppText folder got index.js for exporting crap.
+// simply moving const styles to seperate styles.js file.
+//Also, AppText folder got index.js for exporting crap.
+
+
+////////// FLATLIST SCREEN, COMPONENT, & SEPEARTORS  ///////////////
+
+// //npm i expo-constants
+// export default function MessagesScreen() {
+//   return (
+//     <Screen> //SafeAreaView styled with Constants.Statusbar height to account for android
+//       <FlatList
+//         data={messages}
+//         keyExtractor={message => message.id.toString()}
+//         renderItem={({ item }) =>
+//           <ListItem //
+//             title={item.title}
+//             subTitle={item.descripdion}
+//             image={item.image}
+//           />}
+//         ItemSeparatorComponent={ListItemSeperator} //View Component styled to be line seperator
+//       />
+//     </Screen>
+//   )
+// }
+
+// ////////////////// LISTS - HANDLING SELECTIONS //////////////////
+
+      // export default function ListItem({ title, subTitle, image, onPress }) {
+      //   return (
+      //     <TouchableHighlight //wrapped list item in touchable for user to see
+      //       underlayColor={colors.light}
+      //       onPress={onPress} //set onPress to prop allows for function to be determined dynamically or by consumer
+      //     >
+      //       <View style={styles.container} >
+      //         <Image style={styles.image} source={image} />
+      //         <View>
+      //           <AppText style={styles.title} >{title}</AppText>
+      //           <AppText style={styles.subTitle} >{subTitle}</AppText>
+      //         </View>
+      //       </View>
+      //     </TouchableHighlight>
+      //   )
+      // }
