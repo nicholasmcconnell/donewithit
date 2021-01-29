@@ -1,6 +1,7 @@
-import React from 'react'
-import { FlatList } from 'react-native'
-import ListItem from '../components/ListItem'
+import React from 'react';
+import { FlatList, StyleSheet } from 'react-native';
+import ListItem from '../components/ListItem';
+import Screen from '../components/Screen/Screen';
 
 const messages = [
     {
@@ -16,18 +17,24 @@ const messages = [
         image: require('../assets/mosh.jpg'),
     },
 ]
-
+//npm i expo-constants
 export default function MessagesScreen() {
     return (
-        <FlatList
-            data={messages}
-            keyExtractor={message => message.id.toString()}
-            renderItem={({ item }) =>
-                <ListItem
-                    title={item.title}
-                    subTitle={item.descripdion}
-                    image={item.image}
-                />}
-        />
+        <Screen>
+            <FlatList
+                data={messages}
+                keyExtractor={message => message.id.toString()}
+                renderItem={({ item }) =>
+                    <ListItem
+                        title={item.title}
+                        subTitle={item.descripdion}
+                        image={item.image}
+                    />}
+            />
+        </Screen>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
