@@ -23,12 +23,14 @@ import Card from './app/components/Card/index';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
 
 export default function App() {
 
   return (
 
-    <ViewImageScreen></ViewImageScreen>
+    <MessagesScreen />
+    // <ViewImageScreen></ViewImageScreen>
 
     // <ListingDetailsScreen></ListingDetailsScreen>
 
