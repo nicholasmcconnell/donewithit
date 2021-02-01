@@ -17,19 +17,25 @@ import {
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
-import AppText from './app/components/AppText/index';
-import AppButton from './app/components/Button/AppButton';
-import Card from './app/components/Card/index';
+import AppText from './app/components/AppText';
+import AppButton from './app/components/AppButton';
+import Card from './app/components/Card';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
+import MyAccountScreen from './app/screens/MyAccountScreen';
+import Icon from './app/components/Icon';
+import Screen from './app/components/Screen';
 
 export default function App() {
 
   return (
-
-    <MessagesScreen />
+    <Screen>
+      <Icon name='email' />
+    </Screen>
+    // <MyAccountScreen />
+    // <MessagesScreen />
     // <ViewImageScreen></ViewImageScreen>
 
     // <ListingDetailsScreen></ListingDetailsScreen>
