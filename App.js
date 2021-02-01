@@ -440,3 +440,65 @@ export default function App() {
       //     </TouchableHighlight>
       //   )
       // }
+
+///////////////////// HANDLING SWPIES ////////////////
+
+      // return (
+      //   <Swipeable renderRightActions={renderRightActions}> //WRAP COMPONENET WITH THIS
+      //       <TouchableHighlight
+      //           underlayColor={colors.light}
+      //           onPress={onPress}
+      //       >
+      //           <View style={styles.container} >
+      //               <Image style={styles.image} source={image} />
+      //               <View>
+      //                   <AppText style={styles.title} >{title}</AppText>
+      //                   <AppText style={styles.subTitle} >{subTitle}</AppText>
+      //               </View>
+      //           </View>
+      //       </TouchableHighlight>
+      //   </Swipeable>
+      // )
+
+        ////// THSI COMPONENT IS PASSED AS RENDER RIGHT ACTIONS PROP TO LIST ITEM COMPONENT
+          // LISTITEMDELETECOMPONENT 
+      //   return (
+      //     <View style={styles.container}>
+      //         <MaterialCommunityIcons
+      //             name='trash-can'
+      //             size={35}
+      //             color='white'
+
+      //         />
+      //     </View>
+      // )
+
+//////////////// DELETING MESSAGE //////////////
+
+      // export default function MessagesScreen() {
+      //   const [messages, setMessages] = useState(intitialMessages);
+
+      //   const handleDelete = (message) => {
+      //       // const newMessages = messages.filter(m => m.id !== messages.id);
+      //       setMessages(messages.filter(m => m.id !== message.id));
+      //   }
+
+      //   return (
+      //       <Screen>
+      //           <FlatList
+      //               data={messages}
+      //               keyExtractor={message => message.id.toString()}
+      //               renderItem={({ item }) =>
+      //                   <ListItem
+      //                       title={item.title}
+      //                       subTitle={item.descripdion}
+      //                       image={item.image}
+      //                       onPress={() => { console.log('message selected', item) }}
+      //                       renderRightActions={() =>
+      //                           <ListItemDeleteAction onPress={() => handleDelete(item)} />}
+      //                   />}
+      //               ItemSeparatorComponent={ListItemSeperator}
+      //           />
+      //       </Screen>
+      //   )
+      // }
