@@ -32,6 +32,7 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
 
 export default function App() {
 
@@ -40,13 +41,13 @@ export default function App() {
   return (
 
     <Screen>
-      <Switch value={isNew} onValueChange={newValue => setIsNew(newValue)} />
+      <AppPicker icon='apps' placeholder='Category' />
+      <AppTextInput icon='email' placeholder='Email' />
     </Screen>
     // <ListingsScreen />
     // <AccountScreen />
     // <MessagesScreen />
     // <ViewImageScreen></ViewImageScreen>
-
     // <ListingDetailsScreen></ListingDetailsScreen>
 
 
