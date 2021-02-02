@@ -33,9 +33,9 @@ import AccountScreen from './app/screens/AccountScreen';
 export default function App() {
 
   return (
-    // <AccountScreen />
+    <AccountScreen />
     // <MyAccountScreen />
-    <MessagesScreen />
+    // <MessagesScreen />
     // <ViewImageScreen></ViewImageScreen>
 
     // <ListingDetailsScreen></ListingDetailsScreen>

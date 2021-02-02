@@ -6,7 +6,7 @@ import AppText from './AppText.js'
 
 import colors from '../config/colors';
 
-export default function ListItem({ title, subTitle, image, ImageComponent, onPress, renderRightActions }) {
+export default function ListItem({ title, subTitle, image, IconComponent, onPress, renderRightActions }) {
     return (
         <Swipeable renderRightActions={renderRightActions}>
             <TouchableHighlight
@@ -14,7 +14,7 @@ export default function ListItem({ title, subTitle, image, ImageComponent, onPre
                 onPress={onPress}
             >
                 <View style={styles.container} >
-                    {ImageComponent}
+                    {IconComponent}
                     {image && <Image style={styles.image} source={image} />}
                     <View style={styles.detailContainer} >
                         <AppText style={styles.title}>{title}</AppText>
