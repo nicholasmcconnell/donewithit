@@ -6,7 +6,7 @@ import AppText from './AppText.js'
 
 import colors from '../config/colors';
 
-export default function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
+export default function ListItem({ title, subTitle, image, ImageComponent, onPress, renderRightActions }) {
     return (
         <Swipeable renderRightActions={renderRightActions}>
             <TouchableHighlight
@@ -14,10 +14,11 @@ export default function ListItem({ title, subTitle, image, onPress, renderRightA
                 onPress={onPress}
             >
                 <View style={styles.container} >
-                    {<Image style={styles.image} source={image} />}
-                    <View>
+                    {ImageComponent}
+                    {image && <Image style={styles.image} source={image} />}
+                    <View style={styles.detailContainer} >
                         <AppText style={styles.title}>{title}</AppText>
-                        <AppText style={styles.subTitle} >{subTitle}</AppText>
+                        {subTitle && <AppText style={styles.subTitle} >{subTitle}</AppText>}
                     </View>
                 </View>
             </TouchableHighlight>
@@ -29,11 +30,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 20,
     },
+    detailContainer: {
+        marginLeft: 10,
+        justifyContent: 'center',
+    },
     image: {
         width: 70,
         height: 70,
         borderRadius: 35,
-        marginRight: 15,
     },
     subTitle: {
         color: colors.medium,

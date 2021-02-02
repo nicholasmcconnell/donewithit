@@ -33,8 +33,11 @@ export default function App() {
 
   return (
     <Screen>
-      <ListItem title="my title" />
-      <Icon name='email' />
+      <ListItem
+        title="my title"
+        subTitle='my subtitle'
+        ImageComponent={<Icon name='email' />}
+      />
     </Screen>
     // <MyAccountScreen />
     // <MessagesScreen />
