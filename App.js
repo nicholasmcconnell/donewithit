@@ -37,7 +37,7 @@ export default function App() {
   return (
 
     <Screen>
-      <AppTextInput />
+      <AppTextInput placeholder='Username' icon='email' />
     </Screen>
     // <ListingsScreen />
     // <AccountScreen />

@@ -6,9 +6,9 @@ import colors from '../config/colors';
 
 function AppTextInput({ icon, ...otherProps }) {
     return (
-        <View style={styles.containers} >
-            {icon && <MaterialCommunityIcons name={icon} />}
-            <TextInput style={styles.textInput} />
+        <View style={styles.container} >
+            {icon && <MaterialCommunityIcons name={icon} size={20} color={colors.medium} style={styles.icon} />}
+            <TextInput style={styles.textInput} {...otherProps} />
         </View>
     )
 }
@@ -22,7 +22,11 @@ const styles = StyleSheet.create({
         padding: 15,
         marginVertical: 10,
     },
+    icon: {
+        marginRight: 10,
+    },
     textInput: {
+        color: colors.dark,
         fontSize: 18,
         fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
     },
