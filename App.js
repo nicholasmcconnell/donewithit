@@ -16,22 +16,24 @@ import {
 } from 'react-native';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
-import AppText from './app/components/AppText';
-import AppButton from './app/components/AppButton';
-import Card from './app/components/Card';
+// import ViewImageScreen from './app/screens/ViewImageScreen';
+// import AppText from './app/components/AppText';
+// import AppButton from './app/components/AppButton';
+// import Card from './app/components/Card';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-import MessagesScreen from './app/screens/MessagesScreen';
-import MyAccountScreen from './app/screens/MyAccountScreen';
+// import { MaterialCommunityIcons } from '@expo/vector-icons';
+// import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+// import MessagesScreen from './app/screens/MessagesScreen';
+// import MyAccountScreen from './app/screens/MyAccountScreen';
 import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
+import ListItem from './app/components/ListItem';
 
 export default function App() {
 
   return (
     <Screen>
+      <ListItem title="my title" />
       <Icon name='email' />
     </Screen>
     // <MyAccountScreen />
@@ -507,4 +509,27 @@ export default function App() {
       //           />
       //       </Screen>
       //   )
+      // }
+
+//////////////////////  BUILDING ICON COMPONENT   //////////
+
+      // function Icon({
+      //   name,
+      //   size = 40,
+      //   backgroundColor = '#000',
+      //   iconColor = '#fff'
+      // }) {
+      //   return (
+      //       <View style={{
+      //           width: size,
+      //           height: size,
+      //           borderRadius: size / 2,
+      //           backgroundColor,
+      //           justifyContent: 'center',
+      //           alignItems: 'center',
+
+      //       }}>
+      //           <MaterialCommunityIcons name={name} color={iconColor} size={size * 0.5} />
+      //       </View>
+      //   );
       // }
