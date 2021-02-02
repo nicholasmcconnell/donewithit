@@ -29,12 +29,14 @@ import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
+import ListingsScreen from './app/screens/ListingsScreen';
 
 export default function App() {
 
   return (
-    <AccountScreen />
-    // <MyAccountScreen />
+
+    <ListingsScreen />
+    // <AccountScreen />
     // <MessagesScreen />
     // <ViewImageScreen></ViewImageScreen>
 
@@ -409,24 +411,46 @@ export default function App() {
 
 ////////// FLATLIST SCREEN, COMPONENT, & SEPEARTORS  ///////////////
 
-// //npm i expo-constants
-// export default function MessagesScreen() {
-//   return (
-//     <Screen> //SafeAreaView styled with Constants.Statusbar height to account for android
-//       <FlatList
-//         data={messages}
-//         keyExtractor={message => message.id.toString()}
-//         renderItem={({ item }) =>
-//           <ListItem //
-//             title={item.title}
-//             subTitle={item.descripdion}
-//             image={item.image}
-//           />}
-//         ItemSeparatorComponent={ListItemSeperator} //View Component styled to be line seperator
-//       />
-//     </Screen>
-//   )
-// }
+    // //npm i expo-constants
+    // export default function MessagesScreen() {
+    //   return (
+    //     <Screen> //SafeAreaView styled with Constants.Statusbar height to account for android
+    //       <FlatList
+    //         data={messages}
+    //         keyExtractor={message => message.id.toString()}
+    //         renderItem={({ item }) =>
+    //           <ListItem //
+    //             title={item.title}
+    //             subTitle={item.descripdion}
+    //             image={item.image}
+    //           />}
+    //         ItemSeparatorComponent={ListItemSeperator} //View Component styled to be line seperator
+    //       />
+    //     </Screen>
+    //   )
+    // }
+              ////////////// SHOWING ADDITIONAL FLATLIST PROPS AND USTING LIST ITEM ////
+                    // FLAT LIST DOES A KIND OF FOREACH USING DATA IN DATA PROP
+      //     <View style={styles.container}>
+      //     <FlatList
+      //         data={menuItems}
+      //         keyExtractor={menuItem => menuItem.title}
+      //         ItemSeparatorComponent={ListItemSeperator}
+      //         renderItem={({ item }) =>
+      //             <ListItem
+      //                 title={item.title}
+      //                 IconComponent={
+      //                     <Icon
+      //                         name={item.icon.name}
+      //                         backgroundColor={item.icon.backgroundColor}
+      //                     />
+      //                 }
+
+      //             />
+      //         }
+
+      //     />
+      // </View>
 
 // ////////////////// LISTS - HANDLING SELECTIONS //////////////////
 
