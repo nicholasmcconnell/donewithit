@@ -23,24 +23,19 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
 // import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-// import MessagesScreen from './app/screens/MessagesScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
 // import MyAccountScreen from './app/screens/MyAccountScreen';
 import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
 import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
 
   return (
-    <Screen>
-      <ListItem
-        title="my title"
-        subTitle='my subtitle'
-        ImageComponent={<Icon name='email' />}
-      />
-    </Screen>
+    // <AccountScreen />
     // <MyAccountScreen />
-    // <MessagesScreen />
+    <MessagesScreen />
     // <ViewImageScreen></ViewImageScreen>
 
     // <ListingDetailsScreen></ListingDetailsScreen>
@@ -536,3 +531,40 @@ export default function App() {
       //       </View>
       //   );
       // }
+
+//////////////////////// ICON ////////////
+      // PASS ICON COMPONENT AS PROP TO LIST ITEM
+
+        // export default function App() {
+
+        //   return (
+        //     <Screen>
+        //       <ListItem
+        //         title="my title"
+        //         subTitle='my subtitle'
+        //         ImageComponent={<Icon name='email' />}
+        //       />
+        //     </Screen>
+
+
+        //// DEFAULT PROP VALUES -> OVERRIDDEN BY THOS SENT WITH IT AS PROP //////
+            //   function Icon({
+            //     name,
+            //     size = 40,
+            //     backgroundColor = '#000',
+            //     iconColor = '#fff'
+            // }) {
+            //     return (
+            //         <View style={{
+            //             width: size,
+            //             height: size,
+            //             borderRadius: size / 2,
+            //             backgroundColor,
+            //             justifyContent: 'center',
+            //             alignItems: 'center',
+
+            //         }}>
+            //             <MaterialCommunityIcons name={name} color={iconColor} size={size * 0.5} />
+            //         </View>
+            //     );
+            // }
