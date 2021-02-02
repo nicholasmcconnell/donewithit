@@ -3,6 +3,7 @@ import { FlatList, StyleSheet, View, Text } from 'react-native'
 import Icon from '../components/Icon';
 
 import ListItem from '../components/ListItem';
+import ListItemSeperator from '../components/ListItemSeperator';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
 
@@ -25,7 +26,7 @@ const menuItems = [
 
 function AccountScreen(props) {
     return (
-        <Screen >
+        <Screen style={styles.screen}>
             <View style={styles.container}>
                 <ListItem
                     title='Nick McConnell'
@@ -37,6 +38,7 @@ function AccountScreen(props) {
                 <FlatList
                     data={menuItems}
                     keyExtractor={menuItem => menuItem.title}
+                    ItemSeparatorComponent={ListItemSeperator}
                     renderItem={({ item }) =>
                         <ListItem
                             title={item.title}
@@ -52,6 +54,13 @@ function AccountScreen(props) {
 
                 />
             </View>
+            <ListItem
+                title='Log Out'
+                IconComponent={
+                    <Icon
+                        name='logout' backgroundColor='#ffe66d'
+                    />
+                } />
 
         </Screen>
     );
@@ -60,6 +69,9 @@ function AccountScreen(props) {
 const styles = StyleSheet.create({
     container: {
         marginVertical: 20,
+    },
+    screen: {
+        backgroundColor: colors.light
     },
 
 })

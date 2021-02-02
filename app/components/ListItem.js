@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         padding: 20,
+        backgroundColor: colors.white,
     },
     detailContainer: {
         marginLeft: 10,
