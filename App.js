@@ -50,7 +50,8 @@ export default function App() {
       <AppPicker
         selectedItem={category}
         onSelectItem={item => setCategory(item)}
-        items={categories} icon='apps' placeholder='Category' />
+        items={categories} icon='apps' placeholder='Category'
+      />
       <AppTextInput icon='email' placeholder='Email' />
     </Screen>
     // <ListingsScreen />
