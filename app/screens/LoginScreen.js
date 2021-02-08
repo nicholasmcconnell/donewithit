@@ -9,6 +9,7 @@ import AppTextInput from '../components/AppTextInput';
 import ErrorMessage from '../components/ErrorMessage';
 import Screen from '../components/Screen';
 import AppFormField from '../components/AppFormField';
+import SubmitButton from '../components/SubmitButton';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
@@ -27,7 +28,7 @@ function LoginScreen(props) {
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
-                {({ handleSubmit }) => (
+                {() => (
                     <>
                         <AppFormField
                             autoCapitalize='none'
@@ -42,12 +43,12 @@ function LoginScreen(props) {
                             autoCapitalize='none'
                             autoCorrect={false}
                             icon='lock'
-                            name='email'
+                            name='password'
                             placeholder='Password'
                             secureTextEntry
                             textContentType='password'
                         />
-                        <AppButton title='Login' onPress={handleSubmit} />
+                        <SubmitButton title='login' />
                     </>
                 )}
 
