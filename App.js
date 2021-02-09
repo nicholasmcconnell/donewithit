@@ -35,53 +35,54 @@ import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
-import ListingEditScreen from './app/screens/ListingEditScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen.js';
 
-const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Cameras", value: 3 },
-]
+// const categories = [
+//   { label: "Furniture", value: 1 },
+//   { label: "Clothing", value: 2 },
+//   { label: "Cameras", value: 3 },
+// ]
 
 export default function App() {
 
-  const [category, setCategory] = useState(categories[0]);
+  // const [category, setCategory] = useState(categories[0]);
 
-  return (
+  return <ListingEditScreen />;
 
-    <ListingEditScreen />
-
-    // <Screen>
-    //   <AppPicker
-    //     selectedItem={category}
-    //     onSelectItem={item => setCategory(item)}
-    //     items={categories} icon='apps' placeholder='Category'
-    //   />
-    //   <AppTextInput icon='email' placeholder='Email' />
-    // </Screen>
-    // <ListingsScreen />
-    // <AccountScreen />
-    // <MessagesScreen />
-    // <ViewImageScreen></ViewImageScreen>
-    // <ListingDetailsScreen></ListingDetailsScreen>
+  // <ListingEditScreen />
 
 
-    // <View
-    //   style={{
-    //     backgroundColor: '#f8f4f4',
-    //     padding: 20,
-    //     paddingTop: 100,
-    //   }}
-    // >
-    //   <Card
-    //     title='Red jacket for sale'
-    //     subTitle='$100'
-    //     image={require('./app/assets/jacket.jpg')} />
-    // </View >
+  // <Screen>
+  //   <AppPicker
+  //     selectedItem={category}
+  //     onSelectItem={item => setCategory(item)}
+  //     items={categories} icon='apps' placeholder='Category'
+  //   />
+  //   <AppTextInput icon='email' placeholder='Email' />
+  // </Screen>
+  // <ListingsScreen />
+  // <AccountScreen />
+  // <MessagesScreen />
+  // <ViewImageScreen></ViewImageScreen>
+  // <ListingDetailsScreen></ListingDetailsScreen>
 
-    // <WelcomeScreen></WelcomeScreen>
+
+  // <View
+  //   style={{
+  //     backgroundColor: '#f8f4f4',
+  //     padding: 20,
+  //     paddingTop: 100,
+  //   }}
+  // >
+  //   <Card
+  //     title='Red jacket for sale'
+  //     subTitle='$100'
+  //     image={require('./app/assets/jacket.jpg')} />
+  // </View >
+
+  // <WelcomeScreen></WelcomeScreen>
 
 
-  )
+
 }
 
