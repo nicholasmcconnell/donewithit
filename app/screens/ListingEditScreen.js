@@ -63,18 +63,4 @@ const styles = StyleSheet.create({
     },
 });
 export default ListingEditScreen;
-//wrap apppicker and errormessage in AppFormPicker
-// appFormPicker
-    // handle the onSelectItem event of the picker component and 
-    //programmatically set the value of the field. 
-        //To do that, you should use the setFieldValue function of Formik. Get that from the Formik context.
 
-//to display the selected item in the picker, 
-    // to get the values object from Formik context. 
-        //This object is similar to the errors and touched objects. It has a key/value pair for every field in the form.
-
-//Validation rules: -
-    //Title: A required string, minimum one character long -
-    //Price: A number between 1 and 10,000 -
-    //Category: A required but nullable object -
-    //Description: An optional string 
