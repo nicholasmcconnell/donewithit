@@ -47,7 +47,7 @@ export default function App() {
 
   // const [category, setCategory] = useState(categories[0]);
 
-  return <ListingsScreen />;
+  return <MessagesScreen />;
 
   // <ListingEditScreen />
 
