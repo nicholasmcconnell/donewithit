@@ -23,12 +23,12 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 // import Card from './app/components/Card';
 
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
-// import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
 // import MyAccountScreen from './app/screens/MyAccountScreen';
 import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
-import ListItem from './app/components/ListItem';
+// import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';

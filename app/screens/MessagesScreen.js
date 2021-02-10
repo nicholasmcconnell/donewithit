@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import ListItem from '../components/ListItem';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
-import ListItemSeperator from '../components/ListItemSeperator';
+import {
+    ListItem,
+    ListItemDeleteAction,
+    ListItemSeperator
+} from '../components/lists';
 import Screen from '../components/Screen';
 
 const intitialMessages = [
     {
         id: 1,
-        title: 'T1',
-        descripdion: 'D1',
+        title: 'Nick McConnell',
+        description: 'Hey! Today was crazy but I will be getting back to yu in the near future!',
         image: require('../assets/nick.jpg'),
     },
     {
         id: 2,
-        title: 'T2',
-        descripdion: 'D2',
+        title: 'Mosh',
+        description: 'I love the red Jacket!  When can I pay you and take it home and wear it forever and be happy beyond all comprehension???',
         image: require('../assets/mosh.jpg'),
     },
 ]
@@ -37,7 +39,7 @@ export default function MessagesScreen() {
                 renderItem={({ item }) =>
                     <ListItem
                         title={item.title}
-                        subTitle={item.descripdion}
+                        subTitle={item.description}
                         image={item.image}
                         onPress={() => { console.log('message selected', item) }}
                         renderRightActions={() =>
@@ -48,10 +50,10 @@ export default function MessagesScreen() {
                 onRefresh={() => {
                     setMessages([
                         {
-                            id: 2,
-                            title: 'T2',
-                            descripdion: 'D2',
-                            image: require('../assets/mosh.jpg'),
+                            id: 1,
+                            title: 'Nick McConnell',
+                            description: 'Hey! Today was crazy but I will be getting back to yu in the near future!',
+                            image: require('../assets/nick.jpg'),
                         }
                     ])
                 }}
