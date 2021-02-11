@@ -1,11 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-function Test(props) {
+function test(props) {
     return (
-        <View>
-
-        </View>
+        <View style={styles.container}></View>
     );
 }
 
@@ -13,4 +11,4 @@ const styles = StyleSheet.create({
     container: {},
 })
 
-export default Test;
+export default test;
