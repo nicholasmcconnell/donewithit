@@ -6,10 +6,6 @@ import * as ImagePicker from 'expo-image-picker';
 import colors from '../config/colors';
 
 function ImageInput({ imageUri, onChangeImage }) {
-    { console.log('hi') }
-
-    console.log(imageUri)
-
     useEffect(() => {
         requestPermission()
     }, [])
