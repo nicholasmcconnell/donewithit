@@ -25,7 +25,6 @@ function AppPicker({
     width = '100%',
 }) {
     const [modalVisible, setModalVisible] = useState(false);
-
     return (
         <>
             <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
