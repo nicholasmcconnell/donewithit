@@ -6,8 +6,8 @@
 
 ## Demonstration
 ![welcomescreen](app/assets/WelcomeScreen.png "welcomescreen")
-![accountscreen](app/assets/AccountScreen.png "accountscreen")
-![listingeditscreen](app/assets/ListingEditSCreen.png "listingeditscreen")
+![accountscreen](app/assets/AccountScreen.gif "accountscreen")
+![listingeditscreen](app/assets/ListingEditScreen.png "listingeditscreen")
 ![messagesscreen](app/assets/MessagesScreen.png "messagesscreen")
 
 ## Tech used
