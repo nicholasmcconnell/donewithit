@@ -2,7 +2,7 @@
 
 ## Overview
 
-'Done With It' is an in development marketplace application where users purchase and sell merchandise they no longer need.  From their account, users can post and edit merchandise listings, purchse items from users, and message buyers.
+'Done With It' is an in development marketplace application where users purchase and sell merchandise they no longer need.  From their account, users can post and edit merchandise listings, purchase items from users, and message buyers.
 
 ## Demonstration
 <p align="center">
