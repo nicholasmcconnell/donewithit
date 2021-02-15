@@ -6,6 +6,9 @@
 
 ## Demonstration
 <img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/WelcomeScreen.png" width="200" height="400">
+<img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/AccountScreen.png" width="200" height="400">
+<img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/ListingEditScreen.gif" width="200" height="400">
+<img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/MessagesScreen.png" width="200" height="400">
 ![WelcomeScreen](app/assets/readme/WelcomeScreen.png "WelcomeScreen")
 ![accountscreen](app/assets/readme/AccountScreen.png "accountscreen")
 ![listingeditscreen](app/assets/readme/ListingEditScreen.gif "listingeditscreen")
