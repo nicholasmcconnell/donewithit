@@ -8,6 +8,8 @@
 <p align="center">
 <img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/WelcomeScreen.png" width="250" height="500"> 
   <img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/AccountScreen.png" width="250" height="500"> 
+  </p>
+  <p align="center">
   <img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/ListingEditScreen.gif" width="250" height="500"> 
   <img src="https://github.com/nicholasmcconnell/DoneWithIt/blob/master/app/assets/readme/MessagesScreen.png" width="250" height="500">
 </p>
