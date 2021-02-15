@@ -6,8 +6,8 @@
 
 ## Demonstration
 ![WelcomeScreen](app/assets/readme/WelcomeScreen.png "WelcomeScreen")
-![accountscreen](app/assets/readme/AccountScreen.gif "accountscreen")
-![listingeditscreen](app/assets/readme/ListingEditScreen.png "listingeditscreen")
+![accountscreen](app/assets/readme/AccountScreen.png "accountscreen")
+![listingeditscreen](app/assets/readme/ListingEditScreen.gif "listingeditscreen")
 ![messagesscreen](app/assets/readme/MessagesScreen.png "messagesscreen")
 
 ## Tech used
