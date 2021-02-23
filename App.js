@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import * as ImagePicker from 'expo-image-picker';
-import * as Permissions from 'expo-permissions';
-
+import React from 'react';
+import { Text } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Screen from './app/components/Screen';
-import { StyleSheet } from 'react-native';
-import ImageInput from './app/components/ImageInput';
-import ImageInputList from './app/components/ImageInputList';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
-import RegisterScreen from './app/screens/RegisterScreen';
-import MessagesScreen from './app/screens/MessagesScreen';
-import LoginScreen from './app/screens/LoginScreen';
-import ListingsScreen from './app/screens/ListingsScreen';
-import ListingEditScreen from './app/screens/ListingEditScreen';
-import ListingDetailScreen from './app/screens/ListingDetailsScreen';
-import AccountScreen from './app/screens/AccountScreen';
 
-export default function App() {
-  return <ListingEditScreen />
-
+const Tweets = () => {
+  <Screen>
+    <Text>Tweets</Text>
+  </Screen>
 }
 
-const styles = StyleSheet.create({
-  container: {
-  }
-})
+const TweetDetails = () => {
+  <Screen>
+    <Text>Tweet Details</Text>
+  </Screen>
+}
+
+const Stack = createStackNavigator();
+const StackNavigator = () => {
+  <Stack.Navigator>
+
+  </Stack.Navigator>
+}
+
+
+export default function App() {
+  return (
+   
+
+  );
+}
