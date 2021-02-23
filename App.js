@@ -5,7 +5,7 @@ import * as Permissions from 'expo-permissions';
 import Screen from './app/components/Screen';
 import { StyleSheet } from 'react-native';
 import ImageInput from './app/components/ImageInput';
-import ImageInputLists from './app/components/ImageInputLists';
+import ImageInputList from './app/components/ImageInputList';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
@@ -17,32 +17,11 @@ import ListingDetailScreen from './app/screens/ListingDetailsScreen';
 import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
-  const [imageUris, setImageUris] = useState([])
-
-  const handleAdd = (uri) => {
-    setImageUris([...imageUris, uri])
-  }
-
-  const handleRemove = (uri) => {
-    setImageUris(imageUris.filter(imageUri => imageUri !== uri));
-
-  }
-
-  return (
-    <AccountScreen />
-    // <Screen style={styles.container} >
-    //   <ImageInputLists
-    //     imageUris={imageUris}
-    //     onAddImage={(uri) => handleAdd(uri)}
-    //     onRemoveImage={(uri) => handleRemove(uri)}
-    //   />
-    // </Screen >
-  )
+  return <ListingEditScreen />
 
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red'
   }
 })
