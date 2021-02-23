@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFormikContest } from 'formik';
+import { useFormikContext } from 'formik';
 
 import ErrorMessage from './ErrorMessage';
 import ImageInputList from '../ImageInputList';
