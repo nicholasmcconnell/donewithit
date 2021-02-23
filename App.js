@@ -29,20 +29,18 @@ export default function App() {
   }
 
   return (
-    <AccountScreen />
-    // <Screen style={styles.container} >
-    //   <ImageInputLists
-    //     imageUris={imageUris}
-    //     onAddImage={(uri) => handleAdd(uri)}
-    //     onRemoveImage={(uri) => handleRemove(uri)}
-    //   />
-    // </Screen >
+    <Screen style={styles.container} >
+      <ImageInputLists
+        imageUris={imageUris}
+        onAddImage={(uri) => handleAdd(uri)}
+        onRemoveImage={(uri) => handleRemove(uri)}
+      />
+    </Screen >
   )
 
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red'
   }
 })
