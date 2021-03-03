@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Button, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Screen from './app/components/Screen';
 
@@ -37,7 +38,7 @@ const TweetDetails = ({ route }) => (
 );
 
 const Stack = createStackNavigator();
-const StackNavigator = () => (
+const FeedNavigator = () => (
   <Stack.Navigator
     // Sets header styles globally
     screenOptions={{
@@ -69,7 +70,13 @@ const Account = () => <Screen><Text>Account</Text></Screen>
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name='Feed' component={Tweets} />
+    <Tab.Screen
+      name='Feed'
+      //Change from TweetDetails component to feedNav component
+      //each tab should have its own navigaton stack
+      //TweetDetails threw erro because tab navigator didn't know it existed
+      component={FeedNavigator}
+    />
     <Tab.Screen name='Account' component={Account} />
   </Tab.Navigator>
 )
