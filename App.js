@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { Button, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 import Screen from './app/components/Screen';
 
 const Link = () => {
-  //this will be a child of tweets
-  //child cant use navigation prop or acces it in parrent.  Importing the hook gives child access to navigation
-
   const navigation = useNavigation();
 
   return (
@@ -21,39 +19,65 @@ const Link = () => {
 
 
 const Tweets = ({ navigation }) => (
-  //navigation is speacial prop from @react-navigation
-  //Wher to navigte is specifgied in Button onPress
-  //navigation prop only availinble to screen components (Stack.Screen)
-  // child of screen component won't be sccesible via navigation prop
   <Screen>
     <Text>Tweets</Text>
-    <Link />
-    {/* <Button
+    <Button
       title='View Tweet'
-      onPress={() => navigation.navigate('TweetDetails')}
-    /> */}
+      onPress={() => navigation.navigate('TweetDetails', { id: 1, title: 'Tweet Details' })}
+    />
   </Screen>
 );
 
-const TweetDetails = () => (
+const TweetDetails = ({ route }) => (
+  //if TweetDetails is a child component you need useRoute() hook
+  //returns same route object as route
   <Screen>
-    <Text>Tweet Details</Text>
+    <Text>Tweet Details {route.params.id}</Text>
   </Screen>
 );
 
 const Stack = createStackNavigator();
 const StackNavigator = () => (
-  <Stack.Navigator>
-    <Stack.Screen name='Tweets' component={Tweets} />
-    <Stack.Screen name='TweetDetails' component={TweetDetails} />
+  <Stack.Navigator
+    // Sets header styles globally
+    screenOptions={{
+      headerStyle: { backgroundColor: 'dodgerblue' },
+      headerTintColor: 'white',
+      // headerShown
+    }}
+  >
+    <Stack.Screen
+      name='Tweets'
+      component={Tweets}
+      //Sets header styles for component and overides global screenOptions
+      options={{
+        headerStyle: { backgroundColor: 'tomato' },
+        headerTintColor: 'white',
+        // headerShown
+      }}
+    />
+    <Stack.Screen
+      name='TweetDetails'
+      component={TweetDetails}
+      options={({ route }) => ({ title: route.params.title })}
+    />
   </Stack.Navigator>
 )
 
+const Account = () => <Screen><Text>Account</Text></Screen>
+
+const Tab = createBottomTabNavigator();
+const TabNavigator = () => (
+  <Tab.Navigator>
+    <Tab.Screen name='Feed' component={Tweets} />
+    <Tab.Screen name='Account' component={Account} />
+  </Tab.Navigator>
+)
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <TabNavigator />
     </NavigationContainer>
   )
 }
