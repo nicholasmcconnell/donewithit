@@ -1,31 +1,15 @@
-import React from 'react';
-import { Text } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Screen from './app/components/Screen';
+import * as React from 'react';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
-const Tweets = () => {
-  <Screen>
-    <Text>Tweets</Text>
-  </Screen>
-}
-
-const TweetDetails = () => {
-  <Screen>
-    <Text>Tweet Details</Text>
-  </Screen>
-}
-
-const Stack = createStackNavigator();
-const StackNavigator = () => {
-  <Stack.Navigator>
-
-  </Stack.Navigator>
-}
-
+import AuthNavigator from './app/navigation/AuthNavigator';
+import navigationTheme from './app/navigation/navigationTheme';
+import AppNavigator from './app/navigation/AppNavigator';
 
 export default function App() {
   return (
-   
-
-  );
+    <NavigationContainer theme={navigationTheme} >
+      {/* <AuthNavigator /> */}
+      <AppNavigator />
+    </NavigationContainer>
+  )
 }
