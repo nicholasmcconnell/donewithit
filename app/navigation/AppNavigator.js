@@ -9,6 +9,7 @@ import AuthNavigator from './AuthNavigator';
 import FeedNavigator from './FeedNavigator';
 import AccountNavigator from './AccoutNavigator';
 import NewListingButton from './NewListingButton';
+import routes from './routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,17 +24,17 @@ const AppNavigator = () => (
             }}
         />
         <Tab.Screen
-            name='ListingsEdit'
+            name={routes.LISTINGS_EDIT}
             component={ListingsEditScreen}
             //need to wrap in () or it will be seen as a block of code and not and object
             options={({ navigation }) => ({
-                tabBarButton: () => <NewListingButton onPress={() => navigation.navigate('ListingsEdit')} />,
+                tabBarButton: () => <NewListingButton onPress={() => navigation.navigate(routes.LISTINGS_EDIT)} />,
                 tabBarIcon: ({ color, size }) =>
                     <MaterialCommunityIcons name='plus-circle' color={color} size={size} />
             })}
         />
         <Tab.Screen
-            name='Acconut'
+            name='Account'
             component={AccountNavigator}
             options={{
                 tabBarIcon: ({ color, size }) =>
