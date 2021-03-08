@@ -14,7 +14,6 @@ const FeedNavigator = () => (
             component={ListingDetailsScreen}
             options={{
                 headerShown: false,
-
             }} />
     </Stack.Navigator>
 )

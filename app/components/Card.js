@@ -6,6 +6,7 @@ import AppText from './AppText.js';
 
 function Card({ title, subTitle, image, onPress }) {
     return (
+        ///CARD MADE TOUCHABLE TO WORK WITH MODAL MODE OF FEED NAVIGATOR
         <TouchableWithoutFeedback onPress={onPress} >
             <View style={styles.card}>
                 <Image style={styles.image} source={image} />
