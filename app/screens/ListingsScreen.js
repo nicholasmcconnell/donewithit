@@ -20,8 +20,8 @@ const listings = [
     },
 
 ]
-
-function ListingsScreen(props) {
+//Because listingsScreen is registered with Navigator we have acces to navigation prop
+function ListingsScreen({ navigation }) {
     return (
         <Screen style={styles.screen}>
             <FlatList
@@ -32,6 +32,8 @@ function ListingsScreen(props) {
                         title={item.title}
                         subTitle={'$' + item.price}
                         image={item.image}
+                        //pass second argument so listiing details screen knows what to render
+                        onPress={() => navigation.navigate('ListingDetails', item)}
                     />
                 }
             />
