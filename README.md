@@ -19,6 +19,8 @@ Built with React Native, 'Done With It' is a mobile marketplace application wher
 - React Native
 - Formik
 - Yup
+- Apisauce
+- Lottie
 - Expo
 - Node.js
 - Vector Icons
