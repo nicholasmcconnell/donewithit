@@ -8,39 +8,27 @@ import routes from '../navigation/routes'
 import Screen from '../components/Screen';
 import AppText from '../components/AppText.js';
 import AppButton from '../components/AppButton';
+import useApi from '../hooks/useApi';
 
 //Because listingsScreen is registered with Navigator we have acces to navigation prop
 export default function ListingsScreen({ navigation }) {
-    const [listings, setListings] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState();
+    const getListingsApi = useApi(listingsApi.getListings);
 
     useEffect(() => {
-        loadListings();
+        getListingsApi.request();
     }, [])
-
-    const loadListings = async () => {
-        setLoading(true);
-        const res = await listingsApi.getListings()
-        setLoading(false);
-
-        if (!res.ok) return setError(true);
-
-        setError(false);
-        setListings(res.data);
-    }
 
     return (
         <Screen style={styles.screen}>
-            {error && (
+            {getListingsApi.error && (
                 <>
                     <AppText style={styles.appText}>Couldn't retrieve the listsings.</AppText>
-                    <AppButton title='Retry' onPress={loadListings} />
+                    <AppButton title='Retry' onPress={getListingsApi.request()} />
                 </>
             )}
-            <ActivityIndicator visible={loading} />
+            <ActivityIndicator visible={getListingsApi.loading} />
             <FlatList
-                data={listings}
+                data={getListingsApi.data}
                 keyExtractor={listing => listing.id.toString()}
                 renderItem={({ item }) =>
                     <Card
