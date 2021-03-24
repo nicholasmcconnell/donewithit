@@ -11,6 +11,7 @@ import {
     SubmitButton,
 } from "../components/forms";
 import Screen from "../components/Screen";
+import listingsApi from '../api/listings';
 import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({
@@ -80,6 +81,15 @@ const categories = [
 function ListingEditScreen() {
     const location = useLocation();
 
+    const handleSubmit = async (listing) => {
+        const res = await listingsApi.addListing({ ...listing, location })
+        if (!res.ok) {
+            return alert('Could not save the listing.')
+        } else {
+            alert('Success');
+        }
+    }
+
     return (
         <Screen style={styles.container}>
             <AppForm
@@ -90,7 +100,7 @@ function ListingEditScreen() {
                     category: null,
                     images: [],
                 }}
-                onSubmit={(values) => console.log(location)}
+                onSubmit={handleSubmit}
                 validationSchema={validationSchema}
             >
                 <FormImagePicker name='images' />

@@ -9,7 +9,7 @@ const addListing = listing => {
     data.append('title', listing.title)
     data.append('price', listing.price)
     data.append('categoryId', listing.category.value)
-    data.append('description', lising.description)
+    data.append('description', listing.description)
 
     listing.images.forEach((image, index) =>
         data.append('images', {
